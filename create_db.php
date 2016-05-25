@@ -51,7 +51,7 @@ if (mysqli_query($conn, $sql)) {
     echo "Error creating table: " . mysqli_error($conn);
 }
 
-echo "\ndelete content of the 'jobs' table\n";
+echo "\ndelete table\n";
 $sql = 'DELETE FROM jobs';
 
 if (mysqli_query($conn, $sql)) {
