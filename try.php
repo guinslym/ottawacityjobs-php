@@ -50,18 +50,8 @@ for($i=0; $i<count($obj['jobs']); $i++) {
 	   //echo $job_ref . " ". $job_url . " ". $position. "\n";
 		$value_to_insert = "('".$job_ref."','".$job_url."','".$name."','".$position."','".$company_desc."','".$education_and_exp."','".$knowledge."','".$job_summary."','".$language_certificates."')";
 		//$sql .= "INSERT INTO jobs (job_ref,job_url) VALUES ($job_ref, $job_url)";
-		
-		//$value_to_insert .= "('".$position."','".$company_desc."')";
-		//$value_to_insert .= "('".$expiry_date."','".$company_desc."')";
-		//$value_to_insert .= "('".$education_and_exp."','".$knowledge."')";
-		//$value_to_insert .= "('".$job_ref."','".$job_url."')";
-		//$value_to_insert .= "('".$job_ref."','".$job_url."')";
-		//$value_to_insert .= "('".$job_ref."','".$job_url."')";
-		//$value_to_insert .= "('".$job_ref."','".$job_url."')";
-		//$value_to_insert .= "('".$job_ref."','".$job_url."')";
-		//$value_to_insert .= "('".$job_ref."','".$job_url."')";
-		//$value_to_insert .= "('".$job_ref."','".$job_url."')";
-
+	
+	
 	$sql = "INSERT INTO jobs (job_ref, job_url, name, position, company_desc, education_and_exp, knowledge, job_summary, language_certificates ) VALUES".$value_to_insert;
 			
 
