@@ -28,22 +28,23 @@ if ($conn->connect_error) {
  */
 
 // sql to create table
-$sql = "CREATE TABLE jobs (
+$sql = "CREATE TABLE IF NOT EXISTS jobs (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-job_ref VARCHAR(30) NOT NULL,
-job_url VARCHAR(250) NOT NULL,
-position VARCHAR(250),
-company_desc TEXT,
-education_and_exp TEXT,
-knowledge TEXT,
-job_summary TEXT,
-language_certificates TEXT,
-name VARCHAR(30),
-post_date VARCHAR(30),
-salary_max VARCHAR(30),
-salary_min VARCHAR(30),
-reg_date TIMESTAMP
-)";
+job_ref VARCHAR(40)  CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+job_url TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+name VARCHAR(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+position TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+company_desc TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+education_and_exp TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+knowledge TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+job_summary TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+language_certificates TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+post_date VARCHAR(30)CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+salary_max VARCHAR(30)CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+salary_min VARCHAR(30)CHARACTER SET utf8 COLLATE utf8_unicode_ci
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8";
+
+
 
 if (mysqli_query($conn, $sql)) {
     echo "Table MyGuests created successfully";
