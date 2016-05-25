@@ -16,10 +16,12 @@ if(! $retval )
 {
   die('Could not get data: ' . mysql_error());
 }
+
 while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
 {
-    echo "Tutorial ID :{$row['id']} \n";
-} 
+    //echo "Tutorial ID :{$row['id']} \n";
+
+}
 echo "Fetched data successfully\n";
 mysql_close($conn);
 ?>

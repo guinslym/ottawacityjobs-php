@@ -29,19 +29,19 @@ if ($conn->connect_error) {
 
 // sql to create table
 $sql = "CREATE TABLE IF NOT EXISTS jobs (
-id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-job_ref VARCHAR(40)  CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-job_url TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-name VARCHAR(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-position TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-company_desc TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-education_and_exp TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-knowledge TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-job_summary TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-language_certificates TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-post_date VARCHAR(30)CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-salary_max VARCHAR(30)CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-salary_min VARCHAR(30)CHARACTER SET utf8 COLLATE utf8_unicode_ci
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+JOBREF VARCHAR(40)  CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+JOBURL TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+NAME VARCHAR(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+POSITION TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+COMPANYDESC TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+EDUCATIONANDEXP TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+KNOWLEDGE TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+JOBSUMMARY TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+LANGUAGECERTIFICATES TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+POSTDATE VARCHAR(30)CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+SALARYMAX VARCHAR(30)CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+SALARYMIN VARCHAR(30)CHARACTER SET utf8 COLLATE utf8_unicode_ci
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8";
 
 

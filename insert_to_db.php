@@ -15,7 +15,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
+
+
 
 mysql_set_charset("utf8");
 
@@ -34,10 +36,10 @@ for($i=0; $i<count($obj['jobs']); $i++) {
     $education_and_exp = $obj['jobs'][$i]["EDUCATIONANDEXP"];
     $knowledge = $obj['jobs'][$i]["KNOWLEDGE"];
     $job_summary = $obj['jobs'][$i]["JOB_SUMMARY"];
-    
-    //there is a difference between 
+
+    //there is a difference between
     //mysql_real_escape_string
-    //and 
+    //and
     //mysqli_real_escape_string
     //mysqli will be deprecated in php 5.5
     //https://stackoverflow.com/questions/25636975/warning-mysqli-real-escape-string-expects-exactly-2-parameters-1-given-wh
@@ -50,10 +52,10 @@ for($i=0; $i<count($obj['jobs']); $i++) {
 	   //echo $job_ref . " ". $job_url . " ". $position. "\n";
 		$value_to_insert = "('".$job_ref."','".$job_url."','".$name."','".$position."','".$company_desc."','".$education_and_exp."','".$knowledge."','".$job_summary."','".$language_certificates."')";
 		//$sql .= "INSERT INTO jobs (job_ref,job_url) VALUES ($job_ref, $job_url)";
-	
-	
+
+
 	$sql = "INSERT INTO jobs (job_ref, job_url, name, position, company_desc, education_and_exp, knowledge, job_summary, language_certificates ) VALUES".$value_to_insert;
-			
+
 
 	if ($conn->query($sql) === TRUE) {
 	    echo "\nNew records created successfully\n";
@@ -62,7 +64,7 @@ for($i=0; $i<count($obj['jobs']); $i++) {
 	}
 	#echo "\n".$value_to_insert."\n";
 
-}//end if load json
+}//end for load json
 
 
 $conn->close();
@@ -89,4 +91,3 @@ mysql> explain jobs;
 14 rows in set (0.00 sec)
 */
 ?>
-
