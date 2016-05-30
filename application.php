@@ -109,6 +109,7 @@ if (mysql_query($sql) === TRUE) {
 }
 
 //close the connection
+unlink('full.json');
 
 mysql_close($conn);
  ?>
